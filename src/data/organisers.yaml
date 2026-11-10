@@ -14,12 +14,16 @@ teams:
       - name: Ricardo Henriques
         photo: /people/ricardo-henriques.jpg
         url: https://henriqueslab.github.io/
-      - name: Estibaliz Gómez-de-Mariscal
-        photo: /people/estibaliz-gomez-de-mariscal.jpg
       - name: Tayla Shakespeare
         photo: /people/tayla-shakespeare.jpg
       - name: Bruno M. Saraiva
         photo: /people/bruno-saraiva.jpg
+  - institution: NOVA Institute for Medical Systems Biology (NIMSB)
+    country: Portugal
+    url: https://nimsb.unl.pt/
+    people:
+      - name: Estibaliz Gómez-de-Mariscal
+        photo: /people/estibaliz-gomez-de-mariscal.jpg
   - institution: Åbo Akademi University
     country: Finland
     url: https://www.abo.fi/
