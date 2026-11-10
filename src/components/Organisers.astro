@@ -25,7 +25,7 @@ const initials = (name: string) =>
       {team.people.map((p) => (
         <li class="person">
           {p.photo ? (
-            <img class="avatar-img" src={p.photo} alt="" width="40" height="40" loading="lazy" />
+            <img class="avatar-img" src={p.photo} alt="" width="56" height="56" loading="lazy" />
           ) : (
             <span class="avatar" aria-hidden="true">{initials(p.name)}</span>
           )}

@@ -202,21 +202,21 @@ section[id] { scroll-margin-top: 4.5rem; }
 }
 .avatar {
   flex: none;
-  width: 2.4rem; height: 2.4rem;
+  width: 3.5rem; height: 3.5rem;
   display: grid; place-items: center;
   border-radius: 50%;
   background: var(--ink-2);
   color: var(--cyan);
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 .avatar-img {
   flex: none;
-  width: 2.4rem; height: 2.4rem;
+  width: 3.5rem; height: 3.5rem;
   border-radius: 50%;
   object-fit: cover;
 }
-.person a, .person span { color: var(--text); }
+.person a, .person span:not(.avatar) { color: var(--text); }
 
 /* FAQ */
 details {

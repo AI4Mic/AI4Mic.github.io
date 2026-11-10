@@ -11,14 +11,17 @@ teams:
     url: https://www.itqb.unl.pt/
     people:
       - name: Ricardo Henriques
+        photo: /people/ricardo-henriques.jpg
         url: https://henriqueslab.github.io/
       - name: Estibaliz Gómez-de-Mariscal
       - name: Tayla Shakespeare
       - name: Bruno M. Saraiva
+        photo: /people/bruno-saraiva.jpg
   - institution: Åbo Akademi University
     country: Finland
     url: https://www.abo.fi/
     people:
       - name: Guillaume Jacquemet
+        photo: /people/guillaume-jacquemet.jpg
         url: https://cellmig.org/
       - name: Adán Olguín Olguín
