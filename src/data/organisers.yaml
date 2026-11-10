@@ -6,6 +6,7 @@ teams:
     people:
       - name: Caron Jacobs
         photo: /people/caron-jacobs.jpg
+        url: https://health.uct.ac.za/idm-imaging/contacts/-jacobs-0
       - name: Kristy Winkler
   - institution: ITQB NOVA
     country: Portugal
@@ -13,17 +14,20 @@ teams:
     people:
       - name: Ricardo Henriques
         photo: /people/ricardo-henriques.jpg
-        url: https://henriqueslab.github.io/
+        url: https://henriqueslab.org/pages/rhenriques
       - name: Tayla Shakespeare
         photo: /people/tayla-shakespeare.jpg
+        url: https://henriqueslab.org/pages/tshakespeare
       - name: Bruno M. Saraiva
         photo: /people/bruno-saraiva.jpg
+        url: https://henriqueslab.org/pages/bmsaraiva
   - institution: NOVA Institute for Medical Systems Biology (NIMSB)
     country: Portugal
     url: https://nimsb.unl.pt/
     people:
       - name: Estibaliz Gómez-de-Mariscal
         photo: /people/estibaliz-gomez-de-mariscal.jpg
+        url: https://nimsb.unl.pt/research-groups/gomez-de-mariscal-lab/
   - institution: Åbo Akademi University
     country: Finland
     url: https://www.abo.fi/
@@ -33,3 +37,4 @@ teams:
         url: https://cellmig.org/
       - name: Adán Olguín Olguín
         photo: /people/adan-olguin-olguin.jpg
+        url: https://cellmig.org/lab-members/#adan-olguin-olguin
