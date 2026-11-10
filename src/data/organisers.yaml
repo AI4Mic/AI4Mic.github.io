@@ -3,6 +3,7 @@ teams:
   - institution: University of Cape Town
     country: South Africa
     url: https://www.uct.ac.za/
+    logo: /logos/uct.svg
     people:
       - name: Caron Jacobs
         photo: /people/caron-jacobs.jpg
@@ -11,6 +12,7 @@ teams:
   - institution: ITQB NOVA
     country: Portugal
     url: https://www.itqb.unl.pt/
+    logo: /logos/itqb.svg
     people:
       - name: Ricardo Henriques
         photo: /people/ricardo-henriques.jpg
@@ -24,6 +26,7 @@ teams:
   - institution: NOVA Institute for Medical Systems Biology (NIMSB)
     country: Portugal
     url: https://nimsb.unl.pt/
+    logo: /logos/nimsb.svg
     people:
       - name: Estibaliz Gómez-de-Mariscal
         photo: /people/estibaliz-gomez-de-mariscal.jpg
@@ -31,6 +34,7 @@ teams:
   - institution: Åbo Akademi University
     country: Finland
     url: https://www.abo.fi/
+    logo: /logos/abo.svg
     people:
       - name: Guillaume Jacquemet
         photo: /people/guillaume-jacquemet.jpg

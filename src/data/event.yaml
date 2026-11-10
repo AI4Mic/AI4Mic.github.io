@@ -58,8 +58,11 @@ bursary:
 funders:
   - name: Wellcome
     url: https://wellcome.org/
+    logo: /logos/wellcome.svg
   - name: Chan Zuckerberg Initiative
     url: https://chanzuckerberg.com/
+    logo: /logos/czi.svg
   - name: The Company of Biologists
     url: https://www.biologists.com/
+    logo: /logos/cob.png
 note: "Supported by the Essential Open Source Software for Science programme (Wellcome and the Chan Zuckerberg Initiative) and a Scientific Meeting Grant from The Company of Biologists."

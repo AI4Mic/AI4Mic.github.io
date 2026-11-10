@@ -34,7 +34,7 @@ const event = defineCollection({
     timeline: z.array(z.object({ date: z.coerce.date(), label: z.string() })),
     learn: z.array(z.object({ title: z.string(), text: z.string() })),
     bursary: z.object({ heading: z.string(), text: z.string() }),
-    funders: z.array(z.object({ name: z.string(), url: z.string() })),
+    funders: z.array(z.object({ name: z.string(), url: z.string(), logo: z.string().optional() })),
     note: z.string(),
   }),
 });

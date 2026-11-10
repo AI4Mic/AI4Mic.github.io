@@ -7,6 +7,7 @@ import Timeline from '../components/Timeline.astro';
 import Organisers from '../components/Organisers.astro';
 import Faq from '../components/Faq.astro';
 import Footer from '../components/Footer.astro';
+import Logos from '../components/Logos.astro';
 import { getOrganisers, getFaq } from '../lib/content';
 
 const event = (await getCollection('event')).at(0)?.data;
@@ -67,6 +68,7 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       <h2>FAQ</h2>
       <Faq items={faq} />
     </section>
+    <Logos teams={teams} funders={event.funders} />
   </main>
   <Footer event={event} />
 </Base>

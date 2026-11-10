@@ -248,3 +248,11 @@ details p { margin: 0.6rem 0 0; max-width: 44rem; }
   .topnav-links { gap: 0.7rem; }
   .hero-inner { padding-top: 2.5rem; }
 }
+
+/* Logo strip: logos come in mixed colours (some white-on-dark), so all render as dark silhouettes */
+.logos { padding-top: 1rem; }
+.logo-row { margin-bottom: 2rem; }
+.logo-row h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 1rem; }
+.logo-row ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.8rem; }
+.logo-row img { height: 3rem; width: auto; max-width: 13rem; object-fit: contain; filter: brightness(0); opacity: 0.75; transition: opacity 0.15s; }
+.logo-row a:hover img { opacity: 1; }

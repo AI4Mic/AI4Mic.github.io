@@ -11,6 +11,7 @@ export interface Team {
   institution: string;
   country: string;
   url?: string;
+  logo?: string;
   people: Person[];
 }
 export interface FaqItem {

@@ -1,0 +1,25 @@
+---
+import type { Team } from '../lib/content';
+
+interface Props {
+  teams: Team[];
+  funders: { name: string; url: string; logo?: string }[];
+}
+const { teams, funders } = Astro.props;
+const rows = [
+  { label: 'Organised by', items: teams.map((t) => ({ name: t.institution, url: t.url, logo: t.logo })) },
+  { label: 'Supported by', items: funders },
+];
+---
+<section class="section logos" aria-label="Organising institutions and funders">
+  {rows.map((row) => (
+    <div class="logo-row">
+      <h3>{row.label}</h3>
+      <ul>
+        {row.items.filter((i) => i.logo).map((i) => (
+          <li><a href={i.url} rel="noopener"><img src={i.logo} alt={i.name} loading="lazy" /></a></li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</section>
