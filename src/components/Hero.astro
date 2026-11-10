@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../lib/dates';
+
+interface Props {
+  event: CollectionEntry<'event'>['data'];
+}
+const { event } = Astro.props;
+const applicationsOpen = event.applications.url !== '';
+---
+<section class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Bioimage analysis bootcamp</p>
+    <h1>{event.title}</h1>
+    <p class="subtitle">{event.subtitle}</p>
+    <p class="hero-dates">
+      {event.datesDisplay} · {event.venue.name}, {event.venue.city}, {event.venue.country}
+    </p>
+    <p class="hero-tz">All times in Cape Town time (SAST, UTC+2)</p>
+    <p class="hero-format">{event.format}</p>
+    <div class="hero-actions">
+      {applicationsOpen ? (
+        <a class="btn btn-primary" href={event.applications.url}>Apply</a>
+      ) : (
+        <span class="btn btn-disabled" aria-disabled="true">Applications open {formatDate(event.applications.opens)}</span>
+      )}
+      <a class="btn btn-ghost" href="/event.ics">Add to calendar</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+import type { FaqItem } from '../lib/content';
+
+interface Props {
+  items: FaqItem[];
+}
+const { items } = Astro.props;
+---
+{items.map((item) => (
+  <details>
+    <summary>{item.q}</summary>
+    <p>{item.a}</p>
+  </details>
+))}

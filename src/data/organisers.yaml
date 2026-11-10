@@ -1,0 +1,24 @@
+# Organising teams. Add `photo:` (path under public/people/) and `url:` when available.
+teams:
+  - institution: University of Cape Town
+    country: South Africa
+    url: https://www.uct.ac.za/
+    people:
+      - name: Caron Jacobs
+      - name: Kristy Winkler
+  - institution: ITQB NOVA
+    country: Portugal
+    url: https://www.itqb.unl.pt/
+    people:
+      - name: Ricardo Henriques
+        url: https://henriqueslab.github.io/
+      - name: Estibaliz Gómez-de-Mariscal
+      - name: Tayla Shakespeare
+      - name: Bruno M. Saraiva
+  - institution: Åbo Akademi University
+    country: Finland
+    url: https://www.abo.fi/
+    people:
+      - name: Guillaume Jacquemet
+        url: https://cellmig.org/
+      - name: Adán Olguín Olguín

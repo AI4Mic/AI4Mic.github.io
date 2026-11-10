@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  event: CollectionEntry<'event'>['data'];
+}
+const { event } = Astro.props;
+---
+<footer class="footer">
+  <p class="funders">
+    {event.funders.map((f, i) => (
+      <Fragment>
+        {i > 0 && ' · '}
+        <a href={f.url} rel="noopener">{f.name}</a>
+      </Fragment>
+    ))}
+  </p>
+  <p>{event.note}</p>
+  <p>Code of conduct coming soon</p>
+  <p>
+    <a href="https://github.com/AI4Mic/AI4Mic.github.io" rel="noopener">GitHub repository</a> · Website by the organising teams
+  </p>
+</footer>

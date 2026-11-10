@@ -1,0 +1,37 @@
+---
+import type { Team } from '../lib/content';
+
+interface Props {
+  teams: Team[];
+}
+const { teams } = Astro.props;
+
+const initials = (name: string) =>
+  name
+    .replace(/\b(M\.|van|de|der|den)\b/gi, ' ')
+    .split(/[\s-]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0]!.toUpperCase())
+    .join('');
+---
+{teams.map((team) => (
+  <div class="team">
+    <h3 class="team-name">
+      {team.url ? <a href={team.url} rel="noopener">{team.institution}</a> : team.institution}
+      <span class="team-country">, {team.country}</span>
+    </h3>
+    <ul class="people">
+      {team.people.map((p) => (
+        <li class="person">
+          {p.photo ? (
+            <img class="avatar-img" src={p.photo} alt="" width="40" height="40" loading="lazy" />
+          ) : (
+            <span class="avatar" aria-hidden="true">{initials(p.name)}</span>
+          )}
+          {p.url ? <a href={p.url} rel="noopener">{p.name}</a> : <span>{p.name}</span>}
+        </li>
+      ))}
+    </ul>
+  </div>
+))}

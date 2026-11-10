@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { daysFromNow, formatDate } from '../lib/dates';
+
+interface Props {
+  items: CollectionEntry<'event'>['data']['timeline'];
+}
+const { items } = Astro.props;
+---
+<ol class="timeline">
+  {items.map((t) => {
+    const done = daysFromNow(t.date) < 0;
+    return (
+      <li class:list={['tl-item', { done }]}>
+        <span class="tl-dot" aria-hidden="true" />
+        <span class="tl-date">{formatDate(t.date)}</span>
+        <span class="tl-label">{t.label}{done && ' (done)'}</span>
+      </li>
+    );
+  })}
+</ol>

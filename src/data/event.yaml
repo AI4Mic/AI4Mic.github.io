@@ -1,0 +1,64 @@
+# Single source for the workshop facts. Every page reads from here.
+# Dates: confirm before publishing (12-14 vs 13-15 April 2027).
+shortName: AI in Action
+title: "AI in Action"
+subtitle: "A hands-on bootcamp in machine learning for bioimage analysis"
+start: 2027-04-13
+end: 2027-04-15
+datesDisplay: "13–15 April 2027"
+timezone: Africa/Johannesburg
+venue:
+  name: University of Cape Town
+  city: Cape Town
+  country: South Africa
+  url: https://www.uct.ac.za/
+format: "Three days of in-person practicals at the University of Cape Town, with talks streamed online."
+intro: >-
+  AI in Action is a three-day training workshop for life scientists who
+  image cells and tissues and want to analyse their data with deep learning.
+  Participants train and use segmentation models on real microscopy data,
+  learn to check whether the results can be trusted, and leave able to run the
+  same methods at their home institution without special hardware.
+audience: >-
+  The call is open to researchers worldwide. Priority goes to early-career
+  researchers at African institutions who generate microscopy data. No
+  programming experience is needed.
+applications:
+  opens: 2026-11-16
+  closes: 2027-01-15
+  url: ""   # application form link, added when the form is ready
+timeline:
+  - date: 2026-11-16
+    label: Applications open
+  - date: 2027-01-15
+    label: Applications close
+  - date: 2027-04-13
+    label: Workshop begins in Cape Town
+learn:
+  - title: Deep learning in the browser
+    text: Train and apply models with ZeroCostDL4Mic notebooks on Google Colab, with no installation.
+  - title: Reproducible training
+    text: Run the same notebooks in containers with DL4MicEverywhere, on a laptop, a workstation or a cluster.
+  - title: Segmentation of cells and nuclei
+    text: Segment microscopy images with StarDist and U-Net, in Fiji and in Python.
+  - title: Trusting the result
+    text: Build ground truth, choose quality metrics and spot when a model fails on your data.
+  - title: Your own images
+    text: Bring a dataset from your own project and work on it with the instructors.
+  - title: Remote computing
+    text: Use cloud desktops with the software already installed, so the methods keep working after the workshop.
+bursary:
+  heading: Bursaries
+  text: >-
+    We aim to fund every in-person place. Bursaries cover travel, visa,
+    accommodation and registration for selected participants based in Africa.
+    Where possible, the University of Cape Town books travel directly, so
+    participants do not wait for reimbursement.
+funders:
+  - name: Wellcome
+    url: https://wellcome.org/
+  - name: Chan Zuckerberg Initiative
+    url: https://chanzuckerberg.com/
+  - name: The Company of Biologists
+    url: https://www.biologists.com/
+note: "Supported by the Essential Open Source Software for Science programme (Wellcome and the Chan Zuckerberg Initiative) and a Scientific Meeting Grant from The Company of Biologists."

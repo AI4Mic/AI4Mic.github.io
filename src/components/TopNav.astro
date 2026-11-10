@@ -1,0 +1,19 @@
+---
+interface Props {
+  shortName: string;
+  applyHref: string;
+}
+const { shortName, applyHref } = Astro.props;
+---
+<nav class="topnav" aria-label="Sections">
+  <span class="topnav-brand">{shortName}</span>
+  <div class="topnav-links">
+    <a href="#about">About</a>
+    <a href="#learn">Learn</a>
+    <a href="#dates">Dates</a>
+    <a href="#bursaries">Bursaries</a>
+    <a href="#organisers">Organisers</a>
+    <a href="#faq">FAQ</a>
+    <a class="topnav-apply" href={applyHref}>Apply</a>
+  </div>
+</nav>

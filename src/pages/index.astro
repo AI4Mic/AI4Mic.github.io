@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import TopNav from '../components/TopNav.astro';
+import Hero from '../components/Hero.astro';
+import Timeline from '../components/Timeline.astro';
+import Organisers from '../components/Organisers.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import { getOrganisers, getFaq } from '../lib/content';
+
+const event = (await getCollection('event')).at(0)?.data;
+if (!event) throw new Error('event.yaml missing or invalid');
+const teams = getOrganisers();
+const faq = getFaq();
+const applyHref = event.applications.url !== '' ? event.applications.url : '#dates';
+---
+<Base
+  title={`${event.title} · ${event.subtitle}`}
+  description={event.subtitle}
+  event={event}
+  organiserNames={teams.map((t) => t.institution)}
+>
+  <TopNav shortName={event.shortName} applyHref={applyHref} />
+  <main id="main">
+    <Hero event={event} />
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>{event.intro}</p>
+      <p>{event.audience}</p>
+    </section>
+
+    <section id="learn" class="section">
+      <h2>What you will learn</h2>
+      <div class="grid cards">
+        {event.learn.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="dates" class="section">
+      <h2>Key dates</h2>
+      <Timeline items={event.timeline} />
+    </section>
+
+    <section id="bursaries" class="section">
+      <h2>{event.bursary.heading}</h2>
+      <p>{event.bursary.text}</p>
+    </section>
+
+    <section id="organisers" class="section">
+      <h2>Organisers</h2>
+      <Organisers teams={teams} />
+    </section>
+
+    <section id="faq" class="section">
+      <h2>FAQ</h2>
+      <Faq items={faq} />
+    </section>
+  </main>
+  <Footer event={event} />
+</Base>
