@@ -5,6 +5,7 @@ teams:
     url: https://www.uct.ac.za/
     people:
       - name: Caron Jacobs
+        photo: /people/caron-jacobs.jpg
       - name: Kristy Winkler
   - institution: ITQB NOVA
     country: Portugal
@@ -14,7 +15,9 @@ teams:
         photo: /people/ricardo-henriques.jpg
         url: https://henriqueslab.github.io/
       - name: Estibaliz Gómez-de-Mariscal
+        photo: /people/estibaliz-gomez-de-mariscal.jpg
       - name: Tayla Shakespeare
+        photo: /people/tayla-shakespeare.jpg
       - name: Bruno M. Saraiva
         photo: /people/bruno-saraiva.jpg
   - institution: Åbo Akademi University
@@ -25,3 +28,4 @@ teams:
         photo: /people/guillaume-jacquemet.jpg
         url: https://cellmig.org/
       - name: Adán Olguín Olguín
+        photo: /people/adan-olguin-olguin.jpg
