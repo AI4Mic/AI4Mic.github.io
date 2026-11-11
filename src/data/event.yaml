@@ -24,13 +24,13 @@ audience: >-
   researchers at African institutions who generate microscopy data. We expect
   the practicals to need little or no programming.
 applications:
-  opens: 2026-11-16
-  closes: 2027-01-15
+  opens: 2026-12-01
+  closes: 2027-02-01
   url: ""   # application form link, added when the form is ready
 timeline:
-  - date: 2026-11-16
+  - date: 2026-12-01
     label: Applications open
-  - date: 2027-01-15
+  - date: 2027-02-01
     label: Applications close
   - date: 2027-04-13
     label: Workshop begins in Cape Town
