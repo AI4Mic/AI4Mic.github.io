@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import { getOrganisers } from '../lib/content';
+
+const event = (await getCollection('event')).at(0)?.data;
+if (!event) throw new Error('event.yaml missing or invalid');
+const teams = getOrganisers();
+const contact = 'caron.jacobs@uct.ac.za';
+---
+<Base
+  title={`Code of conduct · ${event.title}`}
+  description={`Code of conduct for ${event.title}`}
+  event={event}
+  organiserNames={teams.map((t) => t.institution)}
+>
+  <main id="main">
+    <section class="section">
+      <p><a href="/">← {event.title}</a></p>
+      <h2>Code of conduct</h2>
+      <p>{event.title} brings together participants, instructors, speakers and organisers from many countries and career stages. Everyone taking part should be able to learn, teach and ask questions without fear of harassment or exclusion. This code applies to every part of the workshop: practicals, talks, meals, social events, the online stream and the workshop chat channels. It supplements the policies of the University of Cape Town and of each participant's home institution.</p>
+
+      <h3>Expected behaviour</h3>
+      <p>Treat everyone with respect and courtesy, whatever their career stage, nationality, language, ethnicity, gender identity, sexual orientation, disability, religion, age or appearance.</p>
+      <p>Help others learn. Ask and answer questions with patience; every level of experience is welcome.</p>
+      <p>Ask before you photograph people or share their slides, images or unpublished results. Talks are recorded and streamed. Practicals and discussions are not recorded unless everyone present agrees.</p>
+      <p>Credit the work of others, including software, datasets and trained models.</p>
+      <p>Follow the safety rules of the University of Cape Town and of the venue.</p>
+
+      <h3>Unacceptable behaviour</h3>
+      <p>The organisers do not tolerate harassment, intimidation or discrimination in any form. This includes offensive comments or images, unwelcome physical contact or sexual attention, deliberate disruption of talks or practicals, recording people who have asked not to be recorded, and retaliation against anyone who reports a concern.</p>
+
+      <h3>Reporting a concern</h3>
+      <p>If you experience or witness behaviour that breaks this code, tell any organiser in person or write to <a href={`mailto:${contact}`}>{contact}</a>. You may choose an organiser from a team other than the one you work with. The organisers treat every report in confidence and share it only with those who need to act on it.</p>
+
+      <h3>Consequences</h3>
+      <p>The organisers may take any action they judge appropriate, from a warning to removal from the workshop. Where the law or institutional policy requires it, they will refer the matter to the University of Cape Town or another relevant authority.</p>
+    </section>
+  </main>
+  <Footer event={event} />
+</Base>
