@@ -53,7 +53,7 @@ const canonical = new URL(Astro.url.pathname, site).href;
           addressCountry: event.venue.country,
         },
       },
-      organizer: organiserNames.map((name) => ({ '@type': 'Person', name })),
+      organizer: organiserNames.map((name) => ({ '@type': 'Organization', name })),
       url: site.href,
     })} />
   </head>
