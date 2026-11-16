@@ -90,6 +90,10 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       ))}
       <h3>Accessibility</h3>
       <p>{event.accessibility} Email <a href={`mailto:${event.contact}`}>{event.contact}</a>.</p>
+      <h3>Cancellation policy</h3>
+      {event.cancellation.map((c) => (
+        <p><strong>{c.name}:</strong> {c.text}</p>
+      ))}
     </section>
 
     <section id="organisers" class="section">

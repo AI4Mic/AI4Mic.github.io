@@ -95,6 +95,11 @@ accessibility: >-
   have accessibility requirements, including mobility, dietary or other
   needs, tell us when you apply or by email, and we will do our best to
   accommodate them.
+cancellation:
+  - name: Self-funded participants
+    text: cancellations received in writing before 1 March 2027 receive a refund of the registration fee, less an administration fee of €50. We cannot give refunds for cancellations after this date.
+  - name: Fellowship recipients
+    text: if you can no longer attend, please tell us as soon as possible so that we can offer your place to another applicant. Where the University of Cape Town has already booked your travel, we may ask you to cover costs that cannot be recovered.
 funders:
   - name: Wellcome
     url: https://wellcome.org/

@@ -50,6 +50,7 @@ const event = defineCollection({
     }),
     travel: z.array(z.object({ title: z.string(), text: z.string() })),
     accessibility: z.string(),
+    cancellation: z.array(z.object({ name: z.string(), text: z.string() })),
     funders: z.array(z.object({ name: z.string(), url: z.string(), logo: z.string().optional() })),
     note: z.string(),
   }),
