@@ -139,7 +139,9 @@ section[id] { scroll-margin-top: 4.5rem; }
   margin: 0 auto;
   padding: 3.5rem 1.2rem;
 }
-.section > p { max-width: 44rem; }
+.section > p, .section > ul { max-width: 44rem; }
+.fees { border-collapse: collapse; margin: 1rem 0; }
+.fees th, .fees td { padding: 0.5rem 1rem; border-bottom: 1px solid currentColor; text-align: left; }
 
 .grid { display: grid; gap: 1.2rem; }
 .cards { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }

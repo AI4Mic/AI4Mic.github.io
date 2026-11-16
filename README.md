@@ -6,7 +6,7 @@ Workshop website for "AI in Action: A hands-on bootcamp in machine learning for 
 
 All content lives in three files in `src/data/`:
 
-- `src/data/event.yaml` (dates, venue, timeline, learning outcomes, bursaries, funders)
+- `src/data/event.yaml` (dates, venue, timeline, learning outcomes, application, fees, fellowships, travel, funders)
 - `src/data/organisers.yaml` (organising teams)
 - `src/data/faq.yaml` (frequently asked questions)
 

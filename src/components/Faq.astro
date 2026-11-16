@@ -9,6 +9,6 @@ const { items } = Astro.props;
 {items.map((item) => (
   <details>
     <summary>{item.q}</summary>
-    <p>{item.a}</p>
+    <p set:html={item.a} />
   </details>
 ))}

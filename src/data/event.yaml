@@ -12,6 +12,9 @@ venue:
   city: Cape Town
   country: South Africa
   url: https://www.uct.ac.za/
+  campus: "The workshop takes place on the University of Cape Town's Faculty of Health Sciences campus, in Observatory, Cape Town."
+  map: https://maps.app.goo.gl/zFoWTTRRuws6PNu59
+contact: kristy.winkler@uct.ac.za
 format: "Three days of in-person practicals at the University of Cape Town, with talks streamed online."
 intro: >-
   AI in Action is a three-day training workshop for life scientists who
@@ -27,6 +30,10 @@ applications:
   opens: 2026-12-01
   closes: 2027-02-01
   url: ""   # application form link, added when the form is ready
+  text: "Applications are submitted through our online form. Before you begin, please have the following ready:"
+  needs:
+    - A CV
+    - One representative microscopy image from your own work
 timeline:
   - date: 2026-12-01
     label: Applications open
@@ -45,16 +52,49 @@ learn:
     text: Build ground truth, choose quality metrics and spot when a model fails on your data.
   - title: Your own images
     text: Bring a dataset from your own project and work on it with the instructors.
-  - title: Remote computing
-    text: Use cloud desktops with the software already installed, so the methods keep working after the workshop.
-bursary:
-  heading: Bursaries
+  - title: Back at your institution
+    text: Run the same methods on Google Colab or on your own computer, so they keep working after the workshop.
+fees:
+  rows:
+    - attendance: In person
+      standard: "€250"
+      tableC: "€100"
+    - attendance: Online
+      standard: "€20"
+      tableC: "€20"
+  notes:
+    - The in-person registration fee includes lunches and dinners throughout the workshop, all workshop materials, and access to computers for the practical sessions.
+    - The online registration fee includes live access to the talks, the practical session materials, and online support from faculty at designated times.
+    - 'The Table C rate applies to in-person participants currently working in a country listed in Table C ("Developing economies by region") of the statistical annex of the United Nations <em>World Economic Situation and Prospects 2022</em> report. The <a href="https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2022_ANNEX.pdf" rel="noopener">full list of countries</a> is in the annex.'
+fellowships:
+  heading: Fellowships
   text: >-
-    Places are awarded through competitive selection, with a particular
-    focus on researchers from African countries. Bursaries for
-    selected participants cover travel, accommodation and registration.
-    Where possible, the University of Cape Town books travel directly, so
-    participants do not wait for reimbursement.
+    A limited number of fellowships are available. They are awarded through
+    competitive selection, with a particular focus on supporting researchers
+    from African countries.
+  tiers:
+    - name: Full fellowships
+      text: cover travel, accommodation and a registration fee waiver.
+    - name: Partial fellowships
+      text: cover accommodation and a registration fee waiver.
+    - name: Online fellowships
+      text: cover an online registration fee waiver.
+  notes:
+    - Full fellowships are the most competitive. Fellowships do not cover visa fees.
+    - Applicants based in Cape Town are eligible for a registration fee waiver only, without travel or accommodation support.
+    - There is no separate fellowship application. Select your preferred fellowship tier in the application form and complete the fellowship questions.
+travel:
+  - title: Getting to Cape Town and the venue
+    text: Cape Town International Airport is a 20 to 30 minute drive from the Health Sciences campus. We recommend Uber from the airport; it is reliable and widely used in Cape Town.
+  - title: Accommodation
+    text: We recommend the Protea Hotel by Marriott Cape Town Mowbray or the DoubleTree by Hilton Cape Town Upper Eastside. Other options are on Airbnb and Booking.com; the Observatory area is the most convenient for the Health Sciences campus. Please travel to and from campus by Uber, not on foot.
+  - title: Visas
+    text: Attendees arrange their own visas, and fellowships do not cover visa fees. Check whether you need a visa on the <a href="https://www.dha.gov.za/" rel="noopener">South African Department of Home Affairs</a> website. Visa processing can take several weeks, so apply as soon as your place is confirmed.
+accessibility: >-
+  We want everyone to be able to take part fully in the workshop. If you
+  have accessibility requirements, including mobility, dietary or other
+  needs, tell us when you apply or by email, and we will do our best to
+  accommodate them.
 funders:
   - name: Wellcome
     url: https://wellcome.org/

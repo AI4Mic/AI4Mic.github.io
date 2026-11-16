@@ -54,9 +54,42 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       <Timeline items={event.timeline} />
     </section>
 
-    <section id="bursaries" class="section">
-      <h2>{event.bursary.heading}</h2>
-      <p>{event.bursary.text}</p>
+    <section id="apply" class="section">
+      <h2>How to apply</h2>
+      <p>{event.applications.text}</p>
+      <ul>{event.applications.needs.map((n) => <li>{n}</li>)}</ul>
+      {event.applications.url !== '' && <p><a class="btn btn-primary" href={event.applications.url}>Apply</a></p>}
+    </section>
+
+    <section id="fees" class="section">
+      <h2>Registration fees</h2>
+      <table class="fees">
+        <thead><tr><th>Attendance</th><th>Standard fee</th><th>Table C countries*</th></tr></thead>
+        <tbody>
+          {event.fees.rows.map((r) => <tr><td>{r.attendance}</td><td>{r.standard}</td><td>{r.tableC}</td></tr>)}
+        </tbody>
+      </table>
+      <ul>{event.fees.notes.map((n, i) => <li>{i === event.fees.notes.length - 1 && '* '}<Fragment set:html={n} /></li>)}</ul>
+    </section>
+
+    <section id="fellowships" class="section">
+      <h2>{event.fellowships.heading}</h2>
+      <p>{event.fellowships.text}</p>
+      <ul>{event.fellowships.tiers.map((t) => <li><strong>{t.name}</strong> {t.text}</li>)}</ul>
+      {event.fellowships.notes.map((n) => <p>{n}</p>)}
+    </section>
+
+    <section id="venue" class="section">
+      <h2>Venue and travel</h2>
+      <p>{event.venue.campus} <a href={event.venue.map} rel="noopener">Map</a></p>
+      {event.travel.map((t) => (
+        <Fragment>
+          <h3>{t.title}</h3>
+          <p set:html={t.text} />
+        </Fragment>
+      ))}
+      <h3>Accessibility</h3>
+      <p>{event.accessibility} Email <a href={`mailto:${event.contact}`}>{event.contact}</a>.</p>
     </section>
 
     <section id="organisers" class="section">
