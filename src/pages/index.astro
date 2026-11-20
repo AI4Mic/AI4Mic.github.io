@@ -7,15 +7,17 @@ import Timeline from '../components/Timeline.astro';
 import Organisers from '../components/Organisers.astro';
 import Faq from '../components/Faq.astro';
 import Schedule from '../components/Schedule.astro';
+import Speakers from '../components/Speakers.astro';
 import Footer from '../components/Footer.astro';
 import Logos from '../components/Logos.astro';
-import { getOrganisers, getFaq, getSchedule } from '../lib/content';
+import { getOrganisers, getFaq, getSchedule, getSpeakers } from '../lib/content';
 
 const event = (await getCollection('event')).at(0)?.data;
 if (!event) throw new Error('event.yaml missing or invalid');
 const teams = getOrganisers();
 const faq = getFaq();
 const schedule = getSchedule();
+const speakers = getSpeakers();
 const applyHref = event.applications.url !== '' ? event.applications.url : '#dates';
 ---
 <Base
@@ -53,7 +55,7 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
 
     <section id="speakers" class="section">
       <h2>Speakers</h2>
-      <p>Speakers to be announced.</p>
+      <Speakers speakers={speakers} teams={teams} />
     </section>
 
     <section id="dates" class="section">

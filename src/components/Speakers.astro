@@ -1,0 +1,31 @@
+---
+import type { Speakers, Team } from '../lib/content';
+
+interface Props {
+  speakers: Speakers;
+  teams: Team[];
+}
+const { speakers, teams } = Astro.props;
+const people = new Map(teams.flatMap((t) => t.people.map((p) => [p.name, { ...p, institution: t.institution }] as const)));
+const faculty = speakers.faculty.map((s) => {
+  const p = people.get(s.name);
+  if (!p) throw new Error(`speakers.yaml: ${s.name} is not in organisers.yaml`);
+  return { ...p, talk: s.talk };
+});
+---
+<p class="provisional"><strong>Provisional.</strong> {speakers.note}</p>
+<h3>Faculty</h3>
+<div class="grid cards speakers">
+  {faculty.map((s) => (
+    <article class="card speaker">
+      {s.photo && <img class="avatar-img" src={s.photo} alt="" width="56" height="56" loading="lazy" />}
+      <div>
+        <h3>{s.url ? <a href={s.url} rel="noopener">{s.name}</a> : s.name}</h3>
+        <p class="speaker-inst">{s.institution}</p>
+        <p>{s.talk}</p>
+      </div>
+    </article>
+  ))}
+</div>
+<h3>Invited speakers</h3>
+<p>To be announced.</p>

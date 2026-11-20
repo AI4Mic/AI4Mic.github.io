@@ -162,6 +162,11 @@ section[id] { scroll-margin-top: 4.5rem; }
 .sched-time { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); width: 8rem; }
 .sched-lead { display: block; color: var(--muted); font-size: 0.9rem; }
 
+.speaker { display: flex; gap: 0.9rem; align-items: flex-start; }
+.speaker h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+.speaker h3 a { color: var(--ink-2); }
+.speaker .speaker-inst { font-size: 0.85rem; margin-bottom: 0.4rem; }
+
 /* Timeline */
 .timeline { list-style: none; margin: 0; padding: 0; }
 .tl-item {

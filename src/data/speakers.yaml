@@ -1,0 +1,20 @@
+# Speakers. Faculty photos and links come from organisers.yaml (matched by name).
+# Talk titles follow the provisional programme (schedule.yaml).
+note: "Talk titles are provisional. Invited speakers will be announced soon."
+faculty:
+  - name: Caron Jacobs
+    talk: Imaging and AI in African research centres
+  - name: Guillaume Jacquemet
+    talk: Deep learning for microscopy image segmentation
+  - name: Adán Olguín Olguín
+    talk: Cell tracking and cell migration in biology
+  - name: Tayla Shakespeare
+    talk: What a digital image is
+  - name: Bruno M. Saraiva
+    talk: Ground truth and metrics
+  - name: Ricardo Henriques
+    talk: "Seeing more with less: AI-enhanced microscopy for gentle live-cell imaging"
+  - name: Estibaliz Gómez-de-Mariscal
+    talk: "From masks to measurements: deepImageJ, Fiji post-processing, plots and tests"
+  - name: Kristy Winkler
+    talk: Imaging bacteria and mycobacteria (clinic demo, with Bruno M. Saraiva)
