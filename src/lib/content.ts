@@ -1,6 +1,7 @@
 import yaml from 'yaml';
 import organisersYaml from '../data/organisers.yaml?raw';
 import faqYaml from '../data/faq.yaml?raw';
+import scheduleYaml from '../data/schedule.yaml?raw';
 
 export interface Person {
   name: string;
@@ -13,6 +14,10 @@ export interface Team {
   url?: string;
   logo?: string;
   people: Person[];
+}
+export interface Schedule {
+  note: string;
+  days: { title: string; sessions: { time: string; session: string; lead?: string }[] }[];
 }
 export interface FaqItem {
   q: string;
@@ -29,4 +34,8 @@ export function getOrganisers(): Team[] {
 
 export function getFaq(): FaqItem[] {
   return parse<FaqItem[]>(faqYaml);
+}
+
+export function getSchedule(): Schedule {
+  return parse<Schedule>(scheduleYaml);
 }

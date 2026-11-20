@@ -1,0 +1,21 @@
+---
+import type { Schedule } from '../lib/content';
+
+interface Props {
+  schedule: Schedule;
+}
+const { schedule } = Astro.props;
+---
+<p class="provisional"><strong>Provisional.</strong> {schedule.note}</p>
+{schedule.days.map((day) => (
+  <details class="sched-day">
+    <summary>{day.title}</summary>
+    <table class="sched">
+      <tbody>
+        {day.sessions.map((s) => (
+          <tr><td class="sched-time">{s.time}</td><td>{s.session}{s.lead && <span class="sched-lead">{s.lead}</span>}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </details>
+))}
