@@ -23,6 +23,7 @@ export interface Schedule {
 export interface Speakers {
   note: string;
   faculty: { name: string; talk: string }[];
+  invited?: (Person & { institution: string; talk: string })[];
 }
 export interface FaqItem {
   q: string;

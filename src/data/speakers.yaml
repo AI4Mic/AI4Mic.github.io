@@ -1,6 +1,6 @@
 # Speakers. Faculty photos and links come from organisers.yaml (matched by name).
 # Talk titles follow the provisional programme (schedule.yaml).
-note: "Talk titles are provisional. Invited speakers will be announced soon."
+note: "Talk titles are provisional. More invited speakers will be announced soon."
 faculty:
   - name: Caron Jacobs
     talk: Imaging and AI in African research centres
@@ -18,3 +18,10 @@ faculty:
     talk: "From masks to measurements: deepImageJ, Fiji post-processing, plots and tests"
   - name: Kristy Winkler
     talk: Imaging bacteria and mycobacteria (clinic demo, with Bruno M. Saraiva)
+# Invited speakers from outside the organising labs (confirmed only).
+invited:
+  - name: Anna Kreshuk
+    institution: EMBL Heidelberg
+    url: https://www.embl.org/groups/kreshuk/
+    photo: /people/anna-kreshuk.jpg
+    talk: "Segmentation with ilastik: talk and tutorial"

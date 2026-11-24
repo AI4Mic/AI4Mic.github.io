@@ -28,4 +28,17 @@ const faculty = speakers.faculty.map((s) => {
   ))}
 </div>
 <h3>Invited speakers</h3>
-<p>To be announced.</p>
+{speakers.invited?.length ? (
+  <div class="grid cards speakers">
+    {speakers.invited.map((s) => (
+      <article class="card speaker">
+        {s.photo && <img class="avatar-img" src={s.photo} alt="" width="56" height="56" loading="lazy" />}
+        <div>
+          <h3>{s.url ? <a href={s.url} rel="noopener">{s.name}</a> : s.name}</h3>
+          <p class="speaker-inst">{s.institution}</p>
+          <p>{s.talk}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+) : <p>To be announced.</p>}
