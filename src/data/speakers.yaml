@@ -1,9 +1,13 @@
-# Speakers. Faculty photos and links come from organisers.yaml (matched by name).
+# Speakers. Organisers' photos, links and institutions come from organisers.yaml (matched by name);
+# outside speakers give institution, url and photo here.
 # Talk titles follow the provisional programme (schedule.yaml).
 note: "Talk titles are provisional. More invited speakers will be announced soon."
-faculty:
-  - name: Caron Jacobs
-    talk: Imaging and AI in African research centres
+invited:
+  - name: Anna Kreshuk
+    institution: EMBL Heidelberg
+    url: https://www.embl.org/groups/kreshuk/
+    photo: /people/anna-kreshuk.jpg
+    talk: "Segmentation with ilastik: talk and tutorial"
   - name: Guillaume Jacquemet
     talk: Deep learning for microscopy image segmentation
   - name: Adán Olguín Olguín
@@ -16,12 +20,9 @@ faculty:
     talk: "Seeing more with less: AI-enhanced microscopy for gentle live-cell imaging"
   - name: Estibaliz Gómez-de-Mariscal
     talk: "From masks to measurements: deepImageJ, Fiji post-processing, plots and tests"
+# Local faculty (UCT hosts).
+faculty:
+  - name: Caron Jacobs
+    talk: Imaging and AI in African research centres
   - name: Kristy Winkler
     talk: Imaging bacteria and mycobacteria (clinic demo, with Bruno M. Saraiva)
-# Invited speakers from outside the organising labs (confirmed only).
-invited:
-  - name: Anna Kreshuk
-    institution: EMBL Heidelberg
-    url: https://www.embl.org/groups/kreshuk/
-    photo: /people/anna-kreshuk.jpg
-    talk: "Segmentation with ilastik: talk and tutorial"

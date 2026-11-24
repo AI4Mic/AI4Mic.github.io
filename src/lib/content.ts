@@ -22,8 +22,13 @@ export interface Schedule {
 }
 export interface Speakers {
   note: string;
-  faculty: { name: string; talk: string }[];
-  invited?: (Person & { institution: string; talk: string })[];
+  faculty: SpeakerEntry[];
+  invited: SpeakerEntry[];
+}
+// Organisers need only name and talk; outside speakers also give institution, url, photo.
+export interface SpeakerEntry extends Person {
+  talk: string;
+  institution?: string;
 }
 export interface FaqItem {
   q: string;
