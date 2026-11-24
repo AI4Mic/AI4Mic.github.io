@@ -68,7 +68,7 @@ section[id] { scroll-margin-top: 4.5rem; }
   /* scrim keeps the text column readable over the nuclei field */
   background-image:
     linear-gradient(90deg, rgb(11 16 32 / 0.94) 0%, rgb(11 16 32 / 0.82) 50%, rgb(11 16 32 / 0.15) 85%),
-    url('/hero/hero.svg');
+    url('/bg/hero.jpg');
   background-size: cover;
   background-position: right center;
   color: #fff;
@@ -131,6 +131,15 @@ section[id] { scroll-margin-top: 4.5rem; }
   background: rgba(255,255,255,0.08);
   color: #9aa6c0;
   border: 1px dashed rgba(255,255,255,0.3);
+}
+
+/* Full-width microscopy image strips between sections (SMLMS2024 image collection) */
+.band {
+  height: clamp(140px, 22vw, 260px);
+  background-color: var(--ink);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 12px 24px -12px rgb(0 0 0 / 0.5), inset 0 -12px 24px -12px rgb(0 0 0 / 0.5);
 }
 
 /* Sections */
