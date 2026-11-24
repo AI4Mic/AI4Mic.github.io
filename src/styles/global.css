@@ -144,6 +144,7 @@ section[id] { scroll-margin-top: 4.5rem; }
 .fees th, .fees td { padding: 0.5rem 1rem; border-bottom: 1px solid currentColor; text-align: left; }
 
 .grid { display: grid; gap: 1.2rem; }
+.grid.speakers + h3 { margin-top: 2rem; }
 .cards { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
 .card {
   background: #fff;
