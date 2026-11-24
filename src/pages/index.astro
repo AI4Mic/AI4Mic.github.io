@@ -36,7 +36,7 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       <p>{event.audience}</p>
     </section>
 
-    <section id="learn" class="section">
+    <section id="learn" class="section alt">
       <h2>What you will learn</h2>
       <div class="grid cards">
         {event.learn.map((item) => (
@@ -55,7 +55,7 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       <Schedule schedule={schedule} />
     </section>
 
-    <section id="speakers" class="section">
+    <section id="speakers" class="section alt">
       <h2>Speakers</h2>
       <Speakers speakers={speakers} teams={teams} />
     </section>
@@ -65,7 +65,7 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       <Timeline items={event.timeline} />
     </section>
 
-    <section id="apply" class="section">
+    <section id="apply" class="section alt">
       <h2>How to apply</h2>
       <p>{event.applications.text}</p>
       <ul>{event.applications.needs.map((n) => <li>{n}</li>)}</ul>
@@ -81,12 +81,12 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
           {Object.keys(event.fees.rates).map((c) => <option value={c}>{c}</option>)}
         </select></label>
       </p>
-      <table class="fees">
+      <div class="table-card"><table class="fees">
         <thead><tr><th>Attendance</th><th>Standard fee</th><th>Table C countries*</th></tr></thead>
         <tbody>
           {event.fees.rows.map((r) => <tr><td>{r.attendance}</td><td data-eur={r.standard}>€{r.standard}</td><td data-eur={r.tableC}>€{r.tableC}</td></tr>)}
         </tbody>
-      </table>
+      </table></div>
       <p class="footnote" id="fee-rate-note" hidden>Amounts in other currencies are approximate, at the European Central Bank rate of {event.fees.ratesDate}.</p>
       <ul>{event.fees.notes.slice(0, -1).map((n) => <li set:html={n} />)}</ul>
       <p class="footnote">* <Fragment set:html={event.fees.notes.at(-1)} /></p>
@@ -105,10 +105,10 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       </script>
     </section>
 
-    <section id="fellowships" class="section">
+    <section id="fellowships" class="section alt">
       <h2>{event.fellowships.heading}</h2>
       <p>{event.fellowships.text}</p>
-      <ul>{event.fellowships.tiers.map((t) => <li><strong>{t.name}</strong> {t.text}</li>)}</ul>
+      <div class="grid cards tiers">{event.fellowships.tiers.map((t) => <article class="card"><h3>{t.name}</h3><p>{t.text.charAt(0).toUpperCase() + t.text.slice(1)}</p></article>)}</div>
       {event.fellowships.notes.map((n) => <p>{n}</p>)}
     </section>
 
@@ -117,12 +117,14 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
     <section id="venue" class="section">
       <h2>Venue and travel</h2>
       <p>{event.venue.campus} <a href={event.venue.map} rel="noopener">Map</a></p>
-      {event.travel.map((t) => (
-        <Fragment>
-          <h3>{t.title}</h3>
-          <p set:html={t.text} />
-        </Fragment>
-      ))}
+      <div class="grid info">
+        {event.travel.map((t) => (
+          <article class="card">
+            <h3>{t.title}</h3>
+            <p set:html={t.text} />
+          </article>
+        ))}
+      </div>
       <h3>Accessibility</h3>
       <p>{event.accessibility} Email <a href={`mailto:${event.contact}`}>{event.contact}</a>.</p>
       <h3>Cancellation policy</h3>
@@ -136,7 +138,7 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       <Organisers teams={teams} />
     </section>
 
-    <section id="faq" class="section">
+    <section id="faq" class="section alt">
       <h2>FAQ</h2>
       <Faq items={faq} />
     </section>

@@ -68,7 +68,7 @@ section[id] { scroll-margin-top: 4.5rem; }
   /* scrim keeps the text column readable over the nuclei field */
   background-image:
     linear-gradient(90deg, rgb(11 16 32 / 0.94) 0%, rgb(11 16 32 / 0.82) 50%, rgb(11 16 32 / 0.15) 85%),
-    url('/bg/hero.jpg');
+    url('/hero/hero.svg');
   background-size: cover;
   background-position: right center;
   color: #fff;
@@ -154,7 +154,7 @@ section[id] { scroll-margin-top: 4.5rem; }
 .currency select { margin-left: 0.4rem; font: inherit; padding: 0.2rem 0.4rem; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
 .footnote { font-size: 0.9rem; color: var(--muted); }
 .section a:not(.btn) { color: var(--ink-2); text-decoration-color: var(--cyan); text-underline-offset: 2px; }
-.fees th, .fees td { padding: 0.5rem 1rem; border-bottom: 1px solid currentColor; text-align: left; }
+.fees th, .fees td { padding: 0.5rem 1rem; border-bottom: 1px solid var(--line); text-align: left; }
 
 .grid { display: grid; gap: 1.2rem; }
 .speakers-heading { font-size: 1.4rem; margin: 2rem 0 0.8rem; }
@@ -285,3 +285,120 @@ details p { margin: 0.6rem 0 0; max-width: 44rem; }
 .logo-row ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.8rem; }
 .logo-row img { height: 3rem; width: auto; max-width: 13rem; object-fit: contain; filter: brightness(0); opacity: 0.75; transition: opacity 0.15s; }
 .logo-row a:hover img { opacity: 1; }
+
+/* ---- Visual polish (2026-11-24) ---- */
+
+/* Section headings: short accent rule under each h2 */
+.section h2 { position: relative; padding-bottom: 0.6rem; }
+.section h2::after {
+  content: '';
+  position: absolute; left: 0; bottom: 0;
+  width: 3rem; height: 4px; border-radius: 2px;
+  background: var(--cyan);
+  box-shadow: 1.2rem 0 0 var(--magenta);
+  clip-path: inset(0 -1.2rem 0 0);
+}
+#speakers h2::after, #fees h2::after, #organisers h2::after { background: var(--magenta); box-shadow: 1.2rem 0 0 var(--lime); }
+
+/* Alternate full-width background on every other section, without wrapper markup */
+.section.alt {
+  background: var(--paper-2);
+  box-shadow: 0 0 0 100vmax var(--paper-2);
+  clip-path: inset(0 -100vmax);
+}
+.section.alt .card { background: #fff; }
+
+/* Cards: coloured top edge and a gentle lift on hover */
+.card {
+  border-top: 3px solid var(--cyan);
+  box-shadow: 0 1px 2px rgb(11 16 32 / 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cards > .card:nth-child(3n+2) { border-top-color: var(--magenta); }
+.cards > .card:nth-child(3n) { border-top-color: var(--lime); }
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgb(11 16 32 / 0.08); }
+.speaker .avatar-img, .person .avatar-img { box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--line); }
+.speaker-inst { color: var(--muted); }
+
+/* Notices */
+.provisional { background: #fff8de; border-left-color: #f0b400; color: #4a3b00; max-width: 44rem; }
+
+/* Programme: each day as a card, table inside */
+.sched-day {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0;
+  margin: 0 0 0.8rem;
+  overflow: hidden;
+}
+.sched-day summary {
+  list-style: none;
+  padding: 1rem 1.3rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.sched-day summary::-webkit-details-marker { display: none; }
+.sched-day summary::before {
+  content: '+';
+  flex: none;
+  width: 1.6rem; height: 1.6rem;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--ink-2); color: var(--cyan);
+  font-weight: 700;
+}
+.sched-day[open] summary::before { content: '−'; }
+.sched-day[open] summary { border-bottom: 1px solid var(--line); }
+.sched { margin: 0; }
+.sched tr:nth-child(even) td { background: #fbfaf7; }
+.sched td { padding: 0.6rem 1.3rem; }
+.sched tr:last-child td { border-bottom: none; }
+.sched-time { color: var(--ink-2); font-weight: 600; font-size: 0.92rem; }
+.sched-lead { color: #8a3d99; }
+
+/* Fees */
+.table-card {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 0.5rem 0 1rem;
+}
+.fees { margin: 0; min-width: 22rem; }
+.fees th { background: var(--ink-2); color: #fff; font-weight: 600; font-size: 0.92rem; }
+.fees td { font-size: 1.05rem; }
+.fees td:first-child { font-weight: 600; }
+.fees tr:last-child td { border-bottom: none; }
+.fees td:last-child { color: #2f7a00; font-weight: 600; }
+
+/* Fellowship tiers and travel information as card grids */
+.tiers { grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); margin: 0.5rem 0 1.5rem; }
+.info { grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); margin: 1rem 0 2rem; }
+#venue > h3 { margin-top: 2rem; }
+
+/* Timeline */
+.tl-dot { box-shadow: 0 0 0 4px rgb(232 121 249 / 0.2); }
+.tl-item.done .tl-dot { box-shadow: 0 0 0 4px rgb(163 230 53 / 0.25); }
+.tl-date { color: var(--ink-2); }
+
+/* Organisers: one card per team */
+.team {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* FAQ: plus/minus marker */
+#faq details summary { list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+#faq details summary::-webkit-details-marker { display: none; }
+#faq details summary::after { content: '+'; color: var(--cyan); font-weight: 700; font-size: 1.2rem; line-height: 1; }
+#faq details[open] summary::after { content: '−'; }
+
+/* Image strips: thin coloured edge where they meet the page */
+.band { border-top: 3px solid var(--cyan); border-bottom: 3px solid var(--magenta); }
+
+/* Footer */
+.footer { border-top: 4px solid var(--cyan); box-shadow: inset 0 4px 0 var(--magenta); }
