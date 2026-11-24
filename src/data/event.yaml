@@ -55,13 +55,16 @@ learn:
   - title: Back at your institution
     text: Run the same methods on Google Colab or on your own computer, so they keep working after the workshop.
 fees:
+  # Fees in euros. Other currencies are shown approximately at these ECB rates (euros per unit = 1).
+  ratesDate: 23 November 2026
+  rates: { EUR: 1, USD: 1.0939, GBP: 0.83673, ZAR: 19.1513 }
   rows:
     - attendance: In person
-      standard: "€250"
-      tableC: "€100"
+      standard: 250
+      tableC: 100
     - attendance: Online
-      standard: "€20"
-      tableC: "€20"
+      standard: 20
+      tableC: 20
   notes:
     - The in-person registration fee includes lunches and dinners throughout the workshop, all workshop materials, and access to computers for the practical sessions.
     - The online registration fee includes live access to the talks, the practical session materials, and online support from faculty at designated times.

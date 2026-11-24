@@ -39,7 +39,9 @@ const event = defineCollection({
     timeline: z.array(z.object({ date: z.coerce.date(), label: z.string() })),
     learn: z.array(z.object({ title: z.string(), text: z.string() })),
     fees: z.object({
-      rows: z.array(z.object({ attendance: z.string(), standard: z.string(), tableC: z.string() })),
+      ratesDate: z.string(),
+      rates: z.record(z.string(), z.number()),
+      rows: z.array(z.object({ attendance: z.string(), standard: z.number(), tableC: z.number() })),
       notes: z.array(z.string()),
     }),
     fellowships: z.object({

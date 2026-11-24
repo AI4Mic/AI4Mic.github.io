@@ -72,13 +72,33 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
 
     <section id="fees" class="section">
       <h2>Registration fees</h2>
+      <p class="currency"><label>Show fees in
+        <select id="fee-currency">
+          {Object.keys(event.fees.rates).map((c) => <option value={c}>{c}</option>)}
+        </select></label>
+      </p>
       <table class="fees">
         <thead><tr><th>Attendance</th><th>Standard fee</th><th>Table C countries*</th></tr></thead>
         <tbody>
-          {event.fees.rows.map((r) => <tr><td>{r.attendance}</td><td>{r.standard}</td><td>{r.tableC}</td></tr>)}
+          {event.fees.rows.map((r) => <tr><td>{r.attendance}</td><td data-eur={r.standard}>€{r.standard}</td><td data-eur={r.tableC}>€{r.tableC}</td></tr>)}
         </tbody>
       </table>
-      <ul>{event.fees.notes.map((n, i) => <li>{i === event.fees.notes.length - 1 && '* '}<Fragment set:html={n} /></li>)}</ul>
+      <p class="footnote" id="fee-rate-note" hidden>Amounts in other currencies are approximate, at the European Central Bank rate of {event.fees.ratesDate}.</p>
+      <ul>{event.fees.notes.slice(0, -1).map((n) => <li set:html={n} />)}</ul>
+      <p class="footnote">* <Fragment set:html={event.fees.notes.at(-1)} /></p>
+      <script is:inline define:vars={{ rates: event.fees.rates }}>
+        const sel = document.getElementById('fee-currency');
+        sel.addEventListener('change', () => {
+          const c = sel.value;
+          const fmt = new Intl.NumberFormat('en-GB', { style: 'currency', currency: c, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0 });
+          // Round rand to the nearest 10; other currencies to whole units.
+          const step = c === 'ZAR' ? 10 : 1;
+          document.querySelectorAll('.fees td[data-eur]').forEach((td) => {
+            td.textContent = fmt.format(Math.round((td.dataset.eur * rates[c]) / step) * step);
+          });
+          document.getElementById('fee-rate-note').hidden = c === 'EUR';
+        });
+      </script>
     </section>
 
     <section id="fellowships" class="section">

@@ -141,6 +141,10 @@ section[id] { scroll-margin-top: 4.5rem; }
 }
 .section > p, .section > ul { max-width: 44rem; }
 .fees { border-collapse: collapse; margin: 1rem 0; }
+.fees td + td { font-variant-numeric: tabular-nums; }
+.currency select { margin-left: 0.4rem; font: inherit; padding: 0.2rem 0.4rem; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.footnote { font-size: 0.9rem; color: var(--muted); }
+.section a:not(.btn) { color: var(--ink-2); text-decoration-color: var(--cyan); text-underline-offset: 2px; }
 .fees th, .fees td { padding: 0.5rem 1rem; border-bottom: 1px solid currentColor; text-align: left; }
 
 .grid { display: grid; gap: 1.2rem; }
