@@ -29,7 +29,7 @@ audience: >-
 applications:
   opens: 2026-12-01
   closes: 2027-02-01
-  url: ""   # application form link, added when the form is ready
+  url: "https://forms.gle/sxMaBND5eCUFKEjKA"
   text: "Applications are submitted through our online form. Before you begin, please have the following ready:"
   needs:
     - A CV
@@ -103,6 +103,17 @@ cancellation:
     text: cancellations received in writing before 1 March 2027 receive a refund of the registration fee, less an administration fee of €50. We cannot give refunds for cancellations after this date.
   - name: Fellowship recipients
     text: if you can no longer attend, please tell us as soon as possible so that we can offer your place to another applicant. Where the University of Cape Town has already booked your travel, we may ask you to cover costs that cannot be recovered.
+online:
+  status: "Planned; details may change."
+  items:
+    - title: Live talks
+      text: "The talk blocks are streamed live: Day 1 09:00–11:15, Day 2 11:30–13:00 and Day 3 09:00–10:30 (SAST)."
+    - title: Practicals at your own pace
+      text: Each practical has a recorded introduction and materials that run on your own computer or on Google Colab.
+    - title: Help during the practicals
+      text: A chat room connects online participants during the practicals, and a tutor runs a 45-minute video help call each afternoon.
+    - title: Your own data, after the workshop
+      text: Two to three weeks after the workshop, online participants can book a 30-minute one-to-one session on their own data.
 funders:
   - name: Wellcome
     url: https://wellcome.org/

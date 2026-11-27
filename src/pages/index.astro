@@ -55,17 +55,30 @@ const applyHref = event.applications.url !== '' ? event.applications.url : '#dat
       <Schedule schedule={schedule} />
     </section>
 
-    <section id="speakers" class="section alt">
+    <section id="online" class="section alt">
+      <h2>Taking part online</h2>
+      <p class="provisional"><strong>Provisional.</strong> {event.online.status}</p>
+      <div class="grid cards">
+        {event.online.items.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="speakers" class="section">
       <h2>Speakers</h2>
       <Speakers speakers={speakers} teams={teams} />
     </section>
 
-    <section id="dates" class="section">
+    <section id="dates" class="section alt">
       <h2>Key dates</h2>
       <Timeline items={event.timeline} />
     </section>
 
-    <section id="apply" class="section alt">
+    <section id="apply" class="section">
       <h2>How to apply</h2>
       <p>{event.applications.text}</p>
       <ul>{event.applications.needs.map((n) => <li>{n}</li>)}</ul>

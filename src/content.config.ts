@@ -54,6 +54,7 @@ const event = defineCollection({
     accessibility: z.string(),
     cancellation: z.array(z.object({ name: z.string(), text: z.string() })),
     funders: z.array(z.object({ name: z.string(), url: z.string(), logo: z.string().optional() })),
+    online: z.object({ status: z.string(), items: z.array(z.object({ title: z.string(), text: z.string() })) }),
     note: z.string(),
   }),
 });
