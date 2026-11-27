@@ -28,7 +28,7 @@ audience: >-
   the practicals to need little or no programming.
 applications:
   opens: 2026-12-01
-  closes: 2027-02-01
+  closes: 2027-01-15
   url: "https://forms.gle/sxMaBND5eCUFKEjKA"
   text: "Applications are submitted through our online form. Before you begin, please have the following ready:"
   needs:
@@ -37,7 +37,7 @@ applications:
 timeline:
   - date: 2026-12-01
     label: Applications open
-  - date: 2027-02-01
+  - date: 2027-01-15
     label: Applications close
   - date: 2027-04-13
     label: Workshop begins in Cape Town
